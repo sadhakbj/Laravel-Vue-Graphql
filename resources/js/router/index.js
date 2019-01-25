@@ -35,6 +35,11 @@ const routes = [
         path: '/books/:id',
         name: 'books.show',
         component: Book
+    },
+    {
+        path: '/books/:id/edit',
+        name: 'books.edit',
+        component: CreateBook
     }
 ];
 

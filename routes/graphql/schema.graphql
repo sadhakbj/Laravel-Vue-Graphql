@@ -6,9 +6,11 @@ scalar DateTime
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
 type Query {
-    users: [User!]!
-        @paginate(type: "paginator", model: "App\\User")
-        @middleware(checks: ["auth:api"])
+    # users: [User!]!
+    #     @paginate(type: "paginator", model: "App\\User")
+    #     @middleware(checks: ["auth:api"])
+
+    users: [User] @all
 
     user(id: ID @eq): User @find(model: "App\\User")
 
@@ -66,7 +68,7 @@ type Mutation {
         link: String
         description: String
         featured: Boolean
-        category: Int!
+        category_id: Int!
     ): Book @update
 
     deleteBook(id: ID! @rules(apply: ["required"])): Book @delete
@@ -88,6 +90,7 @@ type Book {
     link: String
     description: String
     featured: Boolean
+    category_id: Int!
     category: Category! @belongsTo
 }
 
