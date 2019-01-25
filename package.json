@@ -1,0 +1,42 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.18",
+        "bootstrap": "^4.0.0",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^4.0.7",
+        "lodash": "^4.17.5",
+        "popper.js": "^1.12",
+        "remove-flow-types-loader": "^1.1.0",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.5.22",
+        "webpack-graphql-loader": "^1.0.0"
+    },
+    "dependencies": {
+        "apollo-boost": "^0.1.27",
+        "apollo-cache-inmemory": "^1.4.2",
+        "apollo-client": "^2.4.12",
+        "apollo-link": "^1.2.6",
+        "apollo-link-http": "^1.5.9",
+        "eslint": "^5.12.1",
+        "gql-tag": "^1.0.1",
+        "graphql": "^14.1.1",
+        "graphql-tag": "^2.10.1",
+        "vue-apollo": "^3.0.0-beta.27",
+        "vue-loader": "^15.5.1",
+        "vue-router": "^3.0.2"
+    }
+}
