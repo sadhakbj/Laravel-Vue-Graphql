@@ -6,9 +6,7 @@ scalar DateTime
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
 type Query {
-    # users: [User!]!
-    #     @paginate(type: "paginator", model: "App\\User")
-    #     @middleware(checks: ["auth:api"])
+    # users: [User!]! @paginate(type: "paginator", model: "App\\User")
 
     users: [User] @all
 
@@ -29,6 +27,7 @@ type Mutation {
     createUser(
         name: String @rules(apply: ["required"])
         email: String @rules(apply: ["required", "email", "unique:users,email"])
+        password: String @rules(apply: ["required", "min:6"])
     ): User @create(model: "App\\User")
 
     updateUser(
@@ -36,8 +35,12 @@ type Mutation {
         name: String
         email: String @rules(apply: ["email"])
     ): User @update(model: "App\\User")
+
     deleteUser(id: ID @rules(apply: ["required"])): User
         @delete(model: "App\\User")
+
+    login(email: String, password: String): User
+        @field(resolver: "App\\Http\\GraphQL\\Mutations\\UserMutator@login")
 
     createCategory(
         name: String @rules(apply: ["required", "unique:categories,name"])
@@ -78,6 +81,7 @@ type User {
     id: ID!
     name: String!
     email: String!
+    token: String
     created_at: DateTime!
     updated_at: DateTime!
 }

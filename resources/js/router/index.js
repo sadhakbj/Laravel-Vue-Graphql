@@ -4,11 +4,13 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const Books = { template: '<div>Books go here</div>' };
-const Users = { template: '<div>Users Go here</div>' };
 
 import HomePage from '../views/Home.vue';
 import Book from '../views/Book.vue';
 import CreateBook from '../views/CreateBook.vue';
+
+import UserList from '../views/UsersList.vue';
+import CreateUser from '../views/CreateUser.vue';
 
 const routes = [
     {
@@ -18,8 +20,13 @@ const routes = [
     },
     {
         path: '/users',
-        component: Users,
-        name: 'users'
+        component: UserList,
+        name: 'users.index'
+    },
+    {
+        path: '/users/create',
+        component: CreateUser,
+        name: 'users.create'
     },
     {
         path: '/books',
