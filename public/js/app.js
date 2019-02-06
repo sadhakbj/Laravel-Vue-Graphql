@@ -7642,8 +7642,6 @@ __webpack_require__.r(__webpack_exports__);
         var data = _ref.data;
         _this.book = data.book;
       });
-    } else {
-      alert("i am creating a new thing");
     }
   },
   methods: {
@@ -66418,7 +66416,7 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_apollo__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var httpLink = new apollo_link_http__WEBPACK_IMPORTED_MODULE_3__["HttpLink"]({
-  uri: 'https://laragql.dev/graphql'
+  uri: "http://laragql.test/graphql"
 });
 var cache = new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_4__["InMemoryCache"]();
 var apolloClient = new apollo_client__WEBPACK_IMPORTED_MODULE_2__["ApolloClient"]({
@@ -67584,7 +67582,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_Book_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/Book.vue */ "./resources/js/views/Book.vue");
 /* harmony import */ var _views_CreateBook_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/CreateBook.vue */ "./resources/js/views/CreateBook.vue");
 /* harmony import */ var _views_UsersList_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/UsersList.vue */ "./resources/js/views/UsersList.vue");
-/* harmony import */ var _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../views/CreateUser.vue */ "./resources/js/views/CreateUser.vue");
+/* harmony import */ var _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/CreateUser.vue */ "./resources/js/views/CreateUser.vue");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -67606,7 +67604,7 @@ var routes = [{
   name: 'users.index'
 }, {
   path: '/users/create',
-  component: _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+  component: _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
   name: 'users.create'
 }, {
   path: '/books',
@@ -68084,8 +68082,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/bijaya/Projects/Learn/laravel-graphql-vue/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/bijaya/Projects/Learn/laravel-graphql-vue/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/bijaya-sms/Learn/laragql/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/bijaya-sms/Learn/laragql/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

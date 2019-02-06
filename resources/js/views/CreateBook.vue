@@ -93,9 +93,7 @@ export default {
         .then(({ data }) => {
           this.book = data.book;
         });
-    } else {
-      alert("i am creating a new thing");
-    }
+    } 
   },
   methods: {
     handleFormSubmit() {

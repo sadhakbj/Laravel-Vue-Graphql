@@ -1,13 +1,13 @@
-import Vue from 'vue';
-import VueApollo from 'vue-apollo';
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import Vue from "vue";
+import VueApollo from "vue-apollo";
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 Vue.use(VueApollo);
 
 const httpLink = new HttpLink({
-    uri: 'https://laragql.dev/graphql'
+    uri: process.env.MIX_SOURCE_URL
 });
 
 const cache = new InMemoryCache();

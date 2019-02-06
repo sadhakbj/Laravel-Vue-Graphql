@@ -32,11 +32,13 @@
         "apollo-link": "^1.2.6",
         "apollo-link-http": "^1.5.9",
         "eslint": "^5.12.1",
+        "g": "^2.0.1",
         "gql-tag": "^1.0.1",
         "graphql": "^14.1.1",
         "graphql-tag": "^2.10.1",
         "vue-apollo": "^3.0.0-beta.27",
         "vue-loader": "^15.5.1",
-        "vue-router": "^3.0.2"
+        "vue-router": "^3.0.2",
+        "yarn": "^1.13.0"
     }
 }
