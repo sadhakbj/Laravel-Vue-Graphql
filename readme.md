@@ -14,7 +14,7 @@ Simple Example Single Page application for GraphQL.
 
 ## Installation Guide:
 
--   Clone from bitbucket`git clone git@bitbucket.org:smartmobe/laravel-vue-graphql-example.git`
+-   Clone 
 -   cd `laravel-vue-graphql-example`
 -   Install composer: `composer install`
 -   Copy `.env.example` file: `cp .env.example .env`
